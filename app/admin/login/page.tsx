@@ -12,7 +12,7 @@ const AdminLoginPage: React.FC = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  
+
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -30,7 +30,7 @@ const AdminLoginPage: React.FC = () => {
 
     // Simulated Authentication - In real apps, this calls a backend
     setTimeout(() => {
-      if (username === 'admin' && password === 'fixoboard@2025') {
+      if (username === 'admin' && password === 'fixoboard@2026') {
         sessionStorage.setItem('fixoboard_admin_auth', 'true');
         const origin = (location.state as any)?.from || '/admin/dashboard';
         navigate(origin);
@@ -47,7 +47,7 @@ const AdminLoginPage: React.FC = () => {
       <div className="absolute top-0 right-0 w-96 h-96 bg-red-600/10 blur-[120px] rounded-full translate-x-1/2 -translate-y-1/2" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-red-600/10 blur-[120px] rounded-full -translate-x-1/2 translate-y-1/2" />
 
-      <MotionDiv 
+      <MotionDiv
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         className="w-full max-w-[450px] relative z-10"
@@ -66,10 +66,10 @@ const AdminLoginPage: React.FC = () => {
               <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">Admin Username</label>
               <div className="relative group">
                 <User className="absolute left-5 top-1/2 -translate-y-1/2 text-slate-500 group-focus-within:text-red-600 transition-colors" size={20} />
-                <input 
+                <input
                   autoFocus
                   required
-                  type="text" 
+                  type="text"
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
                   className="w-full bg-slate-800/50 border border-white/5 text-white rounded-2xl p-5 pl-14 focus:ring-2 focus:ring-red-600 transition-all outline-none font-medium"
@@ -82,15 +82,15 @@ const AdminLoginPage: React.FC = () => {
               <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">Secure Password</label>
               <div className="relative group">
                 <Lock className="absolute left-5 top-1/2 -translate-y-1/2 text-slate-500 group-focus-within:text-red-600 transition-colors" size={20} />
-                <input 
+                <input
                   required
-                  type={showPassword ? 'text' : 'password'} 
+                  type={showPassword ? 'text' : 'password'}
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   className="w-full bg-slate-800/50 border border-white/5 text-white rounded-2xl p-5 pl-14 pr-14 focus:ring-2 focus:ring-red-600 transition-all outline-none font-medium"
                   placeholder="••••••••"
                 />
-                <button 
+                <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
                   className="absolute right-5 top-1/2 -translate-y-1/2 text-slate-500 hover:text-white transition-colors"
@@ -101,7 +101,7 @@ const AdminLoginPage: React.FC = () => {
             </div>
 
             {error && (
-              <MotionDiv 
+              <MotionDiv
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 className="bg-red-500/10 border border-red-500/20 text-red-500 p-4 rounded-2xl flex items-center gap-3 text-xs font-bold"
@@ -111,9 +111,9 @@ const AdminLoginPage: React.FC = () => {
               </MotionDiv>
             )}
 
-            <button 
+            <button
               disabled={isLoading}
-              type="submit" 
+              type="submit"
               className="w-full bg-red-600 hover:bg-red-700 disabled:bg-slate-700 text-white font-black py-5 rounded-2xl shadow-xl shadow-red-600/20 uppercase tracking-[0.2em] text-xs transition-all active:scale-95"
             >
               {isLoading ? 'Verifying...' : 'Authenticate Access'}

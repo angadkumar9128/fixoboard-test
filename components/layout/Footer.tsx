@@ -94,7 +94,7 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="pt-10 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] font-bold uppercase tracking-widest text-slate-500">
-          <p>© {currentYear} Fixoboard by Ankita Kumari. Ltd. All rights reserved.</p>
+          <p>© {currentYear} Fixoboard by Ankita Kumari. All rights reserved.</p>
           <div className="flex gap-8">
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
