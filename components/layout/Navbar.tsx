@@ -83,7 +83,7 @@ const Navbar: React.FC = () => {
 
                       {/* Logo Image */}
                       <img
-                        src="fix_logo.png"
+                        src="/assets/logo/fix-logo.svg"
                         alt="Fixoboard – An Advanced Marine Ply"
                         className="h-12 w-auto object-contain"
                       />
