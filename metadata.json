@@ -1,0 +1,8 @@
+{
+  "name": "Copy of FixoBoard Enterprise - Main_02",
+  "description": "A high-performance, data-driven web application for FixoBoard, showcasing advanced PVC/WPC marine ply products and industrial solutions.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
