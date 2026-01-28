@@ -1,18 +1,18 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  ShieldCheck, 
-  FileText, 
-  CheckCircle2, 
-  Zap, 
-  Flame, 
-  MoveUpRight, 
-  ChevronDown, 
-  Microscope, 
-  Thermometer, 
-  Activity, 
-  HardHat, 
+import {
+  ShieldCheck,
+  FileText,
+  CheckCircle2,
+  Zap,
+  Flame,
+  MoveUpRight,
+  ChevronDown,
+  Microscope,
+  Thermometer,
+  Activity,
+  HardHat,
   Layers,
   Download,
   ExternalLink
@@ -96,7 +96,7 @@ const CertificationsPage: React.FC = () => {
       <section className="bg-slate-950 pt-32 pb-24 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/3 h-full bg-blue-600/5 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <MotionDiv 
+          <MotionDiv
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -109,11 +109,11 @@ const CertificationsPage: React.FC = () => {
               <div className="w-px h-8 bg-white/20" />
               <span className="text-white font-black text-4xl italic tracking-tighter">ISO</span>
             </div>
-            <h1 className="text-6xl md:text-8xl font-black text-white mb-6 uppercase tracking-tighter italic">
+            <h1 className="text-4xl md:text-6xl font-black text-white mb-6 uppercase tracking-tighter italic">
               Tested. <span className="text-blue-500">Certified.</span> Trusted.
             </h1>
             <p className="text-slate-400 text-xl md:text-2xl max-w-3xl mx-auto font-medium leading-relaxed">
-              Fixoboard PVC / WPC products are independently tested by globally recognized 
+              Fixoboard PVC / WPC products are independently tested by globally recognized
               laboratories to ensure safety, durability, and international quality standards.
             </p>
           </MotionDiv>
@@ -177,10 +177,10 @@ const CertificationsPage: React.FC = () => {
                 <h3 className="text-3xl font-black text-slate-900 uppercase tracking-tighter italic">Key Performance Metrics</h3>
                 <p className="text-slate-500 font-medium mt-2">Independently verified laboratory results for FixoBoard PVC/WPC Ply.</p>
               </div>
-              
+
               {testResults.map((item, idx) => (
                 <div key={idx} className={`rounded-[2rem] border transition-all overflow-hidden ${openTest === idx ? 'bg-white border-blue-200 shadow-xl' : 'bg-white/50 border-slate-200'}`}>
-                  <button 
+                  <button
                     onClick={() => setOpenTest(openTest === idx ? null : idx)}
                     className="w-full px-8 py-6 flex items-center justify-between text-left"
                   >
@@ -197,7 +197,7 @@ const CertificationsPage: React.FC = () => {
                       <ChevronDown size={24} />
                     </div>
                   </button>
-                  
+
                   <AnimatePresence>
                     {openTest === idx && (
                       <MotionDiv

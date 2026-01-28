@@ -21,7 +21,7 @@ const NewsListingPage: React.FC = () => {
     }
   }, []);
 
-  const filteredItems = items.filter(item => 
+  const filteredItems = items.filter(item =>
     item.isPublished && (filter === 'All' || item.category === filter)
   );
 
@@ -41,7 +41,7 @@ const NewsListingPage: React.FC = () => {
       <section className="bg-slate-900 text-white py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-blue-600/5 blur-[120px] rounded-full translate-x-1/3" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <MotionDiv 
+          <MotionDiv
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
           >
@@ -50,7 +50,7 @@ const NewsListingPage: React.FC = () => {
               <ChevronRight size={10} />
               <span className="text-white">News</span>
             </nav>
-            <h1 className="text-6xl md:text-8xl font-black mb-6 tracking-tighter uppercase italic leading-none">
+            <h1 className="text-4xl md:text-6xl font-black mb-6 tracking-tighter uppercase italic leading-none">
               News & <span className="text-blue-500">Updates.</span>
             </h1>
             <p className="text-xl text-slate-400 max-w-2xl font-medium">
@@ -68,11 +68,10 @@ const NewsListingPage: React.FC = () => {
               <button
                 key={cat}
                 onClick={() => setFilter(cat)}
-                className={`px-6 py-2 rounded-full text-[10px] font-black uppercase tracking-widest transition-all ${
-                  filter === cat 
-                  ? 'bg-blue-600 text-white shadow-lg shadow-blue-200' 
-                  : 'bg-slate-50 text-slate-400 hover:bg-slate-100'
-                }`}
+                className={`px-6 py-2 rounded-full text-[10px] font-black uppercase tracking-widest transition-all ${filter === cat
+                    ? 'bg-blue-600 text-white shadow-lg shadow-blue-200'
+                    : 'bg-slate-50 text-slate-400 hover:bg-slate-100'
+                  }`}
               >
                 {cat === 'All' ? 'All Updates' : cat}
               </button>
@@ -97,8 +96,8 @@ const NewsListingPage: React.FC = () => {
                     className="group flex flex-col bg-white rounded-[2.5rem] border border-slate-100 overflow-hidden hover:shadow-2xl hover:border-blue-100 transition-all"
                   >
                     <Link to={`/news/${item.slug}`} className="relative aspect-[16/10] overflow-hidden">
-                      <img 
-                        src={item.featuredImage} 
+                      <img
+                        src={item.featuredImage}
                         alt={item.title.en}
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
@@ -108,28 +107,28 @@ const NewsListingPage: React.FC = () => {
                         </span>
                       </div>
                     </Link>
-                    
+
                     <div className="p-10 flex flex-col flex-grow">
                       <div className="flex items-center gap-3 text-slate-400 mb-4">
                         <Calendar size={14} className="text-blue-500" />
                         <span className="text-[10px] font-black uppercase tracking-widest">{formatDate(item.publishDate)}</span>
                       </div>
-                      
+
                       <h3 className="text-2xl font-black text-slate-900 mb-4 uppercase tracking-tighter italic leading-tight group-hover:text-blue-600 transition-colors">
                         <Link to={`/news/${item.slug}`}>{item.title.en}</Link>
                       </h3>
-                      
+
                       <p className="text-slate-500 text-sm font-medium leading-relaxed mb-8 line-clamp-3">
                         {item.summary.en}
                       </p>
-                      
+
                       <div className="mt-auto pt-6 border-t border-slate-50 flex items-center justify-between">
                         <div className="flex gap-2">
                           {item.tags.slice(0, 2).map(tag => (
                             <span key={tag} className="text-[9px] font-bold text-slate-400 uppercase tracking-widest">#{tag}</span>
                           ))}
                         </div>
-                        <Link 
+                        <Link
                           to={`/news/${item.slug}`}
                           className="flex items-center gap-2 text-blue-600 font-black uppercase tracking-widest text-[10px] group/btn"
                         >

@@ -2,18 +2,18 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Award, 
-  History as HistoryIcon, 
-  Factory, 
-  Globe, 
-  Leaf, 
-  CheckCircle2, 
-  Eye, 
-  Target, 
-  Microscope, 
-  ShieldCheck, 
-  ChevronRight, 
+import {
+  Award,
+  History as HistoryIcon,
+  Factory,
+  Globe,
+  Leaf,
+  CheckCircle2,
+  Eye,
+  Target,
+  Microscope,
+  ShieldCheck,
+  ChevronRight,
   Clock,
   Zap,
   // Added missing icons for the contact information block
@@ -32,10 +32,10 @@ const AboutPage: React.FC = () => {
         {/* Subtle background animation */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/40 to-slate-900 z-10" />
-          <img 
-            src="https://images.unsplash.com/photo-1518005020453-1bb7446ef47c?auto=format&fit=crop&q=80&w=2070" 
-            className="w-full h-full object-cover opacity-30" 
-            alt="Industrial Excellence" 
+          <img
+            src="https://images.unsplash.com/photo-1518005020453-1bb7446ef47c?auto=format&fit=crop&q=80&w=2070"
+            className="w-full h-full object-cover opacity-30"
+            alt="Industrial Excellence"
           />
         </div>
 
@@ -54,11 +54,11 @@ const AboutPage: React.FC = () => {
             </nav>
 
             <span className="text-blue-500 font-black uppercase tracking-[0.3em] text-xs mb-6 block italic">Atlantic Polymers Presents</span>
-            <h1 className="text-6xl md:text-8xl font-black mb-10 tracking-tighter uppercase italic leading-none">
+            <h1 className="text-4xl md:text-6xl font-black mb-10 tracking-tighter uppercase italic leading-none">
               About <span className="text-blue-500">Fixoboard.</span>
             </h1>
             <p className="text-xl md:text-2xl text-slate-300 leading-relaxed font-medium max-w-2xl">
-              Three decades of mastery in polymer technology, engineering the future of building materials 
+              Three decades of mastery in polymer technology, engineering the future of building materials
               through innovation and industrial excellence.
             </p>
           </MotionDiv>
@@ -80,13 +80,13 @@ const AboutPage: React.FC = () => {
               </h3>
               <div className="space-y-6 text-lg text-slate-600 leading-relaxed font-medium">
                 <p>
-                  Operating under the umbrella of <strong className="text-slate-900 uppercase">Atlantic Polymers Pvt. Ltd.</strong>, 
-                  our brand <strong className="text-blue-600 italic">Fixoboard</strong> has become synonymous with industrial reliability. 
+                  Operating under the umbrella of <strong className="text-slate-900 uppercase">Atlantic Polymers Pvt. Ltd.</strong>,
+                  our brand <strong className="text-blue-600 italic">Fixoboard</strong> has become synonymous with industrial reliability.
                   With over 30 years of history, we are one of India's largest producers and indenting houses for PVC products.
                 </p>
                 <p>
-                  Our inclusion in the <strong className="text-slate-900 border-b-2 border-blue-500">Limca Book of Indian Records</strong> stands 
-                  as an official testament to our achievements in product innovation. From our strategic branch in Dubai to our 
+                  Our inclusion in the <strong className="text-slate-900 border-b-2 border-blue-500">Limca Book of Indian Records</strong> stands
+                  as an official testament to our achievements in product innovation. From our strategic branch in Dubai to our
                   vast national footprint, we provide global sourcing expertise at an industrial scale.
                 </p>
               </div>
@@ -116,7 +116,7 @@ const AboutPage: React.FC = () => {
                   </div>
                 </div>
                 <div className="space-y-4 pt-12">
-                   <div className="bg-blue-600 p-8 rounded-3xl text-white shadow-xl shadow-blue-200">
+                  <div className="bg-blue-600 p-8 rounded-3xl text-white shadow-xl shadow-blue-200">
                     <Globe className="mb-4" size={32} />
                     <h4 className="font-black uppercase text-sm tracking-tight mb-2">Dubai Branch</h4>
                     <p className="text-[10px] text-blue-100 uppercase font-bold leading-relaxed">International sourcing and distribution hub connecting global markets.</p>
@@ -141,23 +141,23 @@ const AboutPage: React.FC = () => {
 
           <div className="grid lg:grid-cols-3 gap-10">
             {[
-              { 
-                icon: <Factory size={40} className="text-blue-600" />, 
-                title: 'State-of-the-Art Silvassa', 
-                desc: 'Our high-capacity facility at Silvassa employs cutting-edge extrusion technology for consistent board density.' 
+              {
+                icon: <Factory size={40} className="text-blue-600" />,
+                title: 'State-of-the-Art Silvassa',
+                desc: 'Our high-capacity facility at Silvassa employs cutting-edge extrusion technology for consistent board density.'
               },
-              { 
-                icon: <ShieldCheck size={40} className="text-blue-600" />, 
-                title: 'International Quality', 
-                desc: 'Every production batch adheres to rigorous international quality standards for thickness and screw retention.' 
+              {
+                icon: <ShieldCheck size={40} className="text-blue-600" />,
+                title: 'International Quality',
+                desc: 'Every production batch adheres to rigorous international quality standards for thickness and screw retention.'
               },
-              { 
-                icon: <Clock size={40} className="text-blue-600" />, 
-                title: 'Uninterrupted Delivery', 
-                desc: 'Time-bound schedules and robust logistics ensure your project stays on track without material delays.' 
+              {
+                icon: <Clock size={40} className="text-blue-600" />,
+                title: 'Uninterrupted Delivery',
+                desc: 'Time-bound schedules and robust logistics ensure your project stays on track without material delays.'
               }
             ].map((item, idx) => (
-              <MotionDiv 
+              <MotionDiv
                 key={idx}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -182,10 +182,10 @@ const AboutPage: React.FC = () => {
               <div className="w-full aspect-square bg-blue-50 rounded-[4rem] relative overflow-hidden flex items-center justify-center">
                 <div className="absolute inset-0 bg-blue-600/5 backdrop-blur-3xl animate-pulse" />
                 <Microscope size={120} className="text-blue-600 relative z-10 opacity-20" />
-                <img 
-                  src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&q=80&w=600" 
-                  className="absolute inset-10 object-cover rounded-[3rem] shadow-2xl z-20" 
-                  alt="R&D Lab" 
+                <img
+                  src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&q=80&w=600"
+                  className="absolute inset-10 object-cover rounded-[3rem] shadow-2xl z-20"
+                  alt="R&D Lab"
                 />
               </div>
             </div>
@@ -199,8 +199,8 @@ const AboutPage: React.FC = () => {
                 Engineering <br /> The Next Era.
               </h3>
               <p className="text-lg text-slate-600 font-medium leading-relaxed mb-10">
-                Fixoboard is future-ready. Our dedicated R&D department continuously refines polymer composites 
-                to develop new materials that exceed current industrial benchmarks. We don't just supply—we innovate 
+                Fixoboard is future-ready. Our dedicated R&D department continuously refines polymer composites
+                to develop new materials that exceed current industrial benchmarks. We don't just supply—we innovate
                 based on real-world furniture industry feedback.
               </p>
               <div className="space-y-4">
@@ -228,7 +228,7 @@ const AboutPage: React.FC = () => {
           <Eye className="text-blue-500 mx-auto mb-10" size={64} />
           <h2 className="text-blue-500 font-black uppercase tracking-[0.3em] text-[10px] mb-8 block">Our Vision</h2>
           <blockquote className="text-3xl md:text-5xl font-black uppercase tracking-tighter italic leading-tight mb-12">
-            "To dominate the future by replacing every piece of traditional plywood, MDF, and particle board 
+            "To dominate the future by replacing every piece of traditional plywood, MDF, and particle board
             with a sustainable, industrial-grade composite that delivers <span className="text-blue-500">lifetime value.</span>"
           </blockquote>
           <div className="flex flex-wrap justify-center gap-6">
@@ -311,8 +311,8 @@ const AboutPage: React.FC = () => {
               { name: 'WPC Door Frames', path: '/products/wpc-door-frames' },
               { name: 'PVC Marble Sheets', path: '/products/pvc-marble-sheets' }
             ].map((link, idx) => (
-              <Link 
-                key={idx} 
+              <Link
+                key={idx}
                 to={link.path}
                 className="group p-8 bg-slate-50 rounded-[2rem] border border-slate-100 hover:bg-white hover:border-blue-600 hover:shadow-xl transition-all"
               >

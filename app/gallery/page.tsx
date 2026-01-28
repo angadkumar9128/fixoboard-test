@@ -22,7 +22,7 @@ const GalleryPage: React.FC = () => {
     }
   }, []);
 
-  const filteredItems = items.filter(item => 
+  const filteredItems = items.filter(item =>
     item.isActive && (filter === 'All' || item.category === filter)
   );
 
@@ -48,7 +48,7 @@ const GalleryPage: React.FC = () => {
       <section className="bg-slate-900 text-white py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-blue-600/10 blur-[100px] rounded-full -translate-x-1/2" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <MotionDiv 
+          <MotionDiv
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
           >
@@ -57,7 +57,7 @@ const GalleryPage: React.FC = () => {
               <ChevronRight size={10} />
               <span className="text-white">Gallery</span>
             </nav>
-            <h1 className="text-6xl md:text-8xl font-black mb-6 tracking-tighter uppercase italic leading-none">
+            <h1 className="text-4xl md:text-6xl font-black mb-6 tracking-tighter uppercase italic leading-none">
               Visual <span className="text-blue-500">Showcase.</span>
             </h1>
             <p className="text-xl text-slate-400 max-w-2xl font-medium">
@@ -75,11 +75,10 @@ const GalleryPage: React.FC = () => {
               <button
                 key={cat}
                 onClick={() => setFilter(cat)}
-                className={`px-6 py-2 rounded-full text-[10px] font-black uppercase tracking-widest transition-all ${
-                  filter === cat 
-                  ? 'bg-blue-600 text-white shadow-lg shadow-blue-200' 
-                  : 'bg-slate-50 text-slate-400 hover:bg-slate-100'
-                }`}
+                className={`px-6 py-2 rounded-full text-[10px] font-black uppercase tracking-widest transition-all ${filter === cat
+                    ? 'bg-blue-600 text-white shadow-lg shadow-blue-200'
+                    : 'bg-slate-50 text-slate-400 hover:bg-slate-100'
+                  }`}
               >
                 {cat === 'All' ? 'All Visuals' : cat}
               </button>
@@ -105,8 +104,8 @@ const GalleryPage: React.FC = () => {
                     className="group relative aspect-[4/3] rounded-[2rem] overflow-hidden bg-slate-100 cursor-pointer shadow-sm hover:shadow-2xl transition-all"
                     onClick={() => setSelectedImage(idx)}
                   >
-                    <img 
-                      src={item.imageUrl} 
+                    <img
+                      src={item.imageUrl}
                       alt={item.title.en}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       loading="lazy"
@@ -141,14 +140,14 @@ const GalleryPage: React.FC = () => {
       {/* Lightbox Modal */}
       <AnimatePresence>
         {selectedImage !== null && (
-          <MotionDiv 
+          <MotionDiv
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-[100] bg-slate-950/95 backdrop-blur-xl flex flex-col items-center justify-center p-4 md:p-10"
             onClick={() => setSelectedImage(null)}
           >
-            <button 
+            <button
               className="absolute top-6 right-6 p-4 text-white/50 hover:text-white hover:bg-white/10 rounded-full transition-all"
               onClick={() => setSelectedImage(null)}
             >
@@ -156,20 +155,20 @@ const GalleryPage: React.FC = () => {
             </button>
 
             <div className="relative w-full max-w-6xl h-full max-h-[80vh] flex items-center justify-center" onClick={(e) => e.stopPropagation()}>
-              <button 
+              <button
                 className="absolute left-0 p-4 text-white/50 hover:text-white hover:bg-white/10 rounded-full transition-all -translate-x-full hidden md:block"
                 onClick={handlePrev}
               >
                 <ChevronLeft size={48} />
               </button>
 
-              <img 
-                src={filteredItems[selectedImage].imageUrl} 
+              <img
+                src={filteredItems[selectedImage].imageUrl}
                 className="max-w-full max-h-full object-contain rounded-2xl shadow-2xl"
                 alt="Selected"
               />
 
-              <button 
+              <button
                 className="absolute right-0 p-4 text-white/50 hover:text-white hover:bg-white/10 rounded-full transition-all translate-x-full hidden md:block"
                 onClick={handleNext}
               >
